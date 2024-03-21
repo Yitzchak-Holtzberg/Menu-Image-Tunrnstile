@@ -1,145 +1,24 @@
-body {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-
-    font-family: "MyFont", serif;
-    color: coral;
-    background: url("lena-denk-vO_RghTzvxE-unsplash.jpg") no-repeat center center/cover;
-   }
-
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    height: 5vh;
-    width: 100%;
-    background-color: #005f73; /* Darker blue for nav bar */
-    color: white;
-    font-size: 1.5rem;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    margin-top: 20px;
-
+.dropdown-content:hover {
+  display: block;
+  position: absolute;
+  max-width: fit-content;
+  top: 100%;
 }
 
-button {
-    background-color: #005f73; /* Darker blue for button */
-    color: white; /* Adjusts text color to white for contrast */
-    border: none;
-    padding: 15px 32px;
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+.dropdown-content {
+  display: none;
+  background-color: var(--background-color);
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-color);
+  z-index: 1;
 }
 
-button:hover {
-    background-color: #013131; /* Even darker blue on hover */
-    color: white; /* Keeps text color white for readability */
+.dropdown-content-show {
+  display: block;
+  position: absolute;
+  max-width: fit-content;
+  top: 100%;
 }
 
-
-.main-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.homePage, .aboutPage, .menuPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    width: 80vw;
-    background-color: rgba(51, 51, 51, 0.8); /* #333 in rgb is (51, 51, 51) */
-
-    color: white;
-    font-size: 1rem;
-    text-align: center;
-    border-radius: 10px;
-}
-
-
-
-
-h1, h2 {
-    font-family: 'Merriweather', serif;
-    color: #005f73; /* Signature Nordic blue */
-}
-
-p {
-    font-family: 'Lato', sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
-
-.menuPage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    background-color: rgba(51, 51, 51, 0.9); /* Slightly more opaque for better readability */
-    color: white;
-    font-size: 1rem;
-    text-align: left;
-    border-radius: 10px;
-    padding: 20px;
-    width: 80vw; /* Adjust as needed */
-    height: auto;
-}
-
-.menu-section {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 200px;
-    width: 100%;
-}
-
-.menu-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-}
-
-body, button, h1, h2, p {
-    font-size: calc(1rem + 0.5vw); /* Adjusts font size based on the viewport width */
-}
-
-
-/* Base styles are already mobile-first. Add media queries for larger screens. */
-
-@media (min-width: 600px) {
-    .homePage, .aboutPage, .menuPage, .main-content {
-        width: 90vw; /* Slightly larger on tablets but still constrained */
-    }
-
-    .menu-section {
-        grid-template-columns: repeat(2, 1fr); /* Adjust for tablets: fewer columns */
-        gap: 50px; /* Smaller gap for smaller screens */
-    }
-}
-
-@media (min-width: 1200px) {
-    .homePage, .aboutPage, .menuPage, .main-content {
-        width: 80vw; /* Default width for desktop */
-    }
-
-    .menu-section {
-        grid-template-columns: repeat(3, 1fr); /* Back to original layout for desktops */
-        gap: 200px; /* Original gap for wider screens */
-    }
-}
-
-
-/* Responsive adjustment for small screens */
-@media (max-width: 600px) {
-    .menu-section {
-        grid-template-columns: 1fr; /* Makes the grid a single column */
-        gap: 20px; /* Reduces gap for a more compact layout */
-    }
-}
+/*# sourceMappingURL=style.css.map */

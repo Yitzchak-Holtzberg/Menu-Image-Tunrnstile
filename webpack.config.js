@@ -20,6 +20,14 @@ module.exports = {
                 use: ['style-loader', 'css-loader'],
             },
             {
+                test: /\.s[ac]ss$/i, // This will match both .sass and .scss files
+                use: [
+                    'style-loader', // 3. Inject styles into DOM
+                    'css-loader',   // 2. Turns css into commonjs
+                    'sass-loader',  // 1. Turns sass into css
+                ],
+            },
+            {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
                 generator: {
